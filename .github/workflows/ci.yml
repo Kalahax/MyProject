@@ -12,3 +12,9 @@ jobs:
         steps:
             - name: Say hello
               run: echo "Hello from Github Actions !"
+
+            - name: Show current directory
+              run: pwd
+
+            - name: Show files
+              run: ls -la
