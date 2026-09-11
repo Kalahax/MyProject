@@ -10,6 +10,12 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            - name: Checkout repository
+              uses: actions/checkout@v7
+
+            - name: Check index.html
+              run: test -f index.html
+
             - name: Say hello
               run: echo "Hello from Github Actions !"
 
@@ -18,3 +24,6 @@ jobs:
 
             - name: Show files
               run: ls -la
+
+            - name: Success
+              run: echo "Website validation successful!"
